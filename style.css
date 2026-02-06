@@ -1,0 +1,531 @@
+:root {
+  --main-color: #bb2323; /* tomato color */
+  --bg-color: #000000; /* dark grey */
+  --text-color: #f5f5f5; /* light background */
+
+  --red-shadow: 5px 5px 20px rgb(245, 10, 10);
+}
+/* to fix horzontal scrollbar */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: cursive;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+h1,
+h2,
+h3,
+button,
+p,
+li {
+  text-transform: capitalize;
+}
+
+.logo {
+  color: var(--main-color);
+}
+nav {
+  display: flex;
+  padding: 0px 50px 0px 30px;
+  justify-content: flex-start; /* keep logo left */
+}
+ul {
+  display: flex;
+  gap: 60px;
+  margin-left: auto; /* push to the right outside gap*/
+  padding: 10px; /* remove default padding */
+  list-style: none; /* remove bullets */
+}
+
+ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  /* list inside gap */
+  margin-right: auto;
+  text-underline-offset: 10px; /* distance from text */
+  transition: 0.3s; /* smooth hover effect */
+}
+ul li a:hover {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+.sidepic {
+  display: flex; /* side by side layout */
+  gap: 2rem; /* space between image and text */
+  /* make image same height as section */
+  padding: 3rem;
+}
+.sidepic img {
+  /* keep aspect ratio */
+  object-fit: cover; /* ensures image scales nicely */
+  flex: 1;
+  border-radius: 50%;
+  height: 20em;
+  border: 10px solid var(--main-color);
+  box-sizing: border-box;
+  border-top-color: #f5f5f5;
+  border-bottom-color: #f5f5f5;
+  box-shadow: 10px 10px 50px rgb(245, 10, 10);
+}
+
+.tagline1,
+.tagline2 {
+  color: var(--main-color);
+}
+.sidepic section {
+  width: 50%;
+  /* percent kuduta work agala becoz parent element poruthu work aagu  percentage */
+  padding-left: 3rem;
+  flex: 3;
+  box-sizing: border-box;
+}
+.icons {
+  font-size: 20px;
+  margin-top: 30px;
+}
+.fab {
+  border: 2px solid var(--main-color);
+  padding: 5px;
+  margin-left: 40px;
+  border-radius: 50%;
+  color: var(--main-color);
+}
+.fab:hover {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  transition: 1s;
+  cursor: pointer;
+}
+button {
+  color: var(--main-color);
+  font-size: 20px;
+  text-transform: capitalize;
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  border: 2px solid var(--main-color);
+  font-family: cursive;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0px 10px;
+  display: block;
+  margin: 40px auto;
+}
+button:hover {
+  background-color: var(--main-color);
+  color: black;
+  transition: 1s;
+  cursor: pointer;
+  box-shadow: 10px 10px 50px rgb(245, 10, 10);
+}
+
+/* nextpage*/
+.getintouch {
+  margin-top: 4em;
+  /* imp */
+  min-height: 20em;
+  height: auto;
+  border: 1px solid var(--main-color);
+  background-color: var(--main-color);
+  padding-left: 20px;
+  color: var(--bg-color);
+  box-sizing: border-box;
+}
+.flexing {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  align-items: center;
+  /* moving the box to upwards */
+  position: relative;
+  bottom: 8em;
+}
+.fa-phone {
+  font-size: 25px;
+  display: block;
+  text-align: center;
+  color: var(--main-color);
+}
+#contact {
+  border: 2px solid var(--bg-color);
+  width: 20em;
+  height: 25em; /* remove 100vh */
+  border-radius: 20px;
+  padding: 20px;
+  overflow: hidden;
+  background-color: var(--bg-color);
+}
+.fa-message {
+  font-size: 25px;
+  display: block;
+  text-align: center;
+  color: var(--main-color);
+}
+.form {
+  width: 20em;
+  border: none; /* remove form border */
+  height: 25em;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: var(--bg-color);
+}
+input {
+  height: 30px;
+  padding: 5px;
+  margin: 10px;
+  font-family: cursive;
+  font-weight: 800;
+  font-style: normal;
+  border-radius: 10px;
+  display: block;
+  color: var(--main-color);
+  text-transform: capitalize;
+}
+/* ::placeholder or */
+input::placeholder {
+  text-transform: capitalize;
+  color: gray;
+}
+
+textarea {
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-left: 5px;
+  font-family: cursive;
+  font-weight: 800;
+  font-style: normal;
+  border-radius: 10px;
+  color: var(--main-color);
+}
+/* next page */
+/* imgisainline so there is a gap svg */
+img[src*="wave"] {
+  display: block;
+}
+#education h1 {
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0;
+  padding-right: 5em;
+  font-family: "Courier New", Courier, monospace;
+}
+#education {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+}
+
+.timeline {
+  position: relative;
+  padding: 3rem 0;
+}
+/* line */
+.timeline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: var(--bg-color);
+  transform: translateX(-50%);
+}
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+}
+.timeline-item.left {
+  justify-content: flex-start;
+}
+
+.timeline-item.right {
+  left: 50%;
+  justify-content: flex-end;
+}
+
+/* circle */
+.timeline-item::after {
+  content: "";
+  background-color: var(--bg-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+}
+/* rightcircle */
+.timeline-item.right::after {
+  left: -10px;
+}
+.edu-content {
+  color: white;
+  background-color: var(--bg-color);
+  width: 10em;
+  padding: 20px;
+  border-radius: 20px;
+}
+#skills {
+  text-align: center;
+}
+.techpro {
+  /* imp */
+  min-height: 100vh;
+  height: auto;
+}
+h2 {
+  margin: 0px;
+  margin-left: 100px;
+}
+.technical {
+  float: left;
+  width: 50%;
+}
+ol li {
+  padding-bottom: 10px;
+  color: var(--text-color);
+}
+.bar {
+  width: 50%;
+  height: 8px;
+  background: #2e2e2e;
+  margin-bottom: 10px;
+  border-radius: 50px;
+}
+.progress {
+  height: 100%;
+  width: 0; /* start from 0 */
+  background: var(--main-color);
+  border-radius: 10px;
+}
+.html {
+  animation: html-fill 2s ease forwards;
+  box-shadow: 5px 5px 20px rgb(245, 10, 10);
+}
+
+@keyframes html-fill {
+  from {
+    width: 0;
+  }
+  to {
+    width: 82%;
+  }
+}
+.css {
+  animation: css-fill 3s ease forwards;
+  box-shadow: 5px 5px 20px rgb(245, 10, 10);
+}
+@keyframes css-fill {
+  from {
+    width: 0;
+  }
+  to {
+    width: 72%;
+  }
+}
+.JavaScript {
+  animation: JavaScript-fill 3s ease forwards;
+  box-shadow: 5px 5px 20px rgb(245, 10, 10);
+}
+@keyframes JavaScript-fill {
+  from {
+    width: 0;
+  }
+  to {
+    width: 62%;
+  }
+}
+.bootstrap {
+  animation: bootstrap-fill 3s ease forwards;
+  box-shadow: 5px 5px 20px rgb(245, 10, 10);
+}
+@keyframes bootstrap-fill {
+  from {
+    width: 0;
+  }
+  to {
+    width: 52%;
+  }
+}
+.github {
+  animation: github-fill 3s ease forwards;
+  box-shadow: 5px 5px 20px rgb(245, 10, 10);
+}
+@keyframes github-fill {
+  from {
+    width: 0;
+  }
+  to {
+    width: 62%;
+  }
+}
+/* after declaring this circle effect becomes smooth */
+@property --percent {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+.circular {
+  --red-shadow: 5px 5px 20px rgb(245, 10, 10);
+}
+.circular1 span,
+.circular2 span,
+.circular3 span,
+.circular4 span {
+  position: absolute;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-color);
+  z-index: 2; /* very important */
+}
+.circular1 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  --percent: 0;
+  background: conic-gradient(
+    var(--main-color) 0% calc(var(--percent) * 1%),
+    black 0% 100%
+  );
+
+  animation: fill-circle 3s linear forwards;
+}
+@keyframes fill-circle {
+  from {
+    --percent: 0;
+  }
+  to {
+    --percent: 90;
+  }
+}
+.circular1::before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: black;
+  border-radius: 50%;
+  /*  --red-shadow: 5px 5px 20px rgb(245, 10, 10);
+*/
+}
+.circular2 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --percent: 0;
+  background: conic-gradient(#bb2323 0% 80%, black 80% 100%);
+
+  --percent: 0;
+  background: conic-gradient(
+    var(--main-color) 0% calc(var(--percent) * 1%),
+    black 0% 100%
+  );
+
+  animation: fill-circle-80 3s linear forwards;
+}
+@keyframes fill-circle-80 {
+  from {
+    --percent: 0;
+  }
+  to {
+    --percent: 80;
+  }
+}
+.circular2::before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: black;
+  border-radius: 50%;
+  /*  --red-shadow: 5px 5px 20px rgb(245, 10, 10);
+*/
+}
+.circular3 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#bb2323 0% 55%, black 55% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --percent: 0;
+  background: conic-gradient(
+    var(--main-color) 0% calc(var(--percent) * 1%),
+    black 0% 100%
+  );
+
+  animation: fill-circle-55 3s linear forwards;
+}
+
+@keyframes fill-circle-55 {
+  from {
+    --percent: 0;
+  }
+  to {
+    --percent: 55;
+  }
+}
+
+.circular3::before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: black;
+  border-radius: 50%;
+  /*  --red-shadow: 5px 5px 20px rgb(245, 10, 10);
+*/
+}
+.circular4 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#bb2323 0% 70%, black 70% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  --percent: 0;
+  background: conic-gradient(
+    var(--main-color) 0% calc(var(--percent) * 1%),
+    black 0% 100%
+  );
+
+  animation: fill-circle-70 3s linear forwards;
+}
+@keyframes fill-circle-70 {
+  from {
+    --percent: 0;
+  }
+  to {
+    --percent: 70;
+  }
+}
+
+.circular4::before {
+  content: "";
+  width: 80px;
+  height: 80px;
+  background: black;
+  border-radius: 50%;
+  /*  --red-shadow: 5px 5px 20px rgb(245, 10, 10);
+*/
+}
+.pro-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 10px;
+  margin-right: 70px;
+}
